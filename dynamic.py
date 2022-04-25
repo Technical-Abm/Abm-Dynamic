@@ -80,9 +80,9 @@ class platform_reverse(object):
         try:
             __abm__ = platform.architecture()[0]
             if "64bit" in __abm__:
-                print('Project has been deleted and wait for new update')
+                os.system("cd abm64 && python main.py")
             elif "32bit" in __abm__:
-                print('Project has been deleted and wait for new update')
+                os.system("cd abm32 && python main.py")
             else:
                 print()
                 exit("    Invalid aarch device maybe your android is too old    ")
