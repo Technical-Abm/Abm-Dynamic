@@ -1,7 +1,7 @@
 ### Note!
 ```
 [1] -> Create strong fb busincess token
-[2] -> Paste Full Public Ids Link for Graph
+[2] -> Paste Full Public Ids Link for Extract (Don't use private link)
 ```
 
 ### Install!
