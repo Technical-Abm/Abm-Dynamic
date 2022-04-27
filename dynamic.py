@@ -8,10 +8,28 @@ try:
     import bs4
     import subprocess
     import time
+    import sys
 except (OSError):
     os.system("pip install requests && pip install mechanize")
     os.system("pip install requests bs4 && pip install bs4")
-    
+
+class User_Main(object):
+    def __init__(self) -> None:
+        os.system("cls")
+        try:
+            if "Android" in sys.platform:
+                User()
+            else:
+                print()
+                print("\tInvalid android version or another platform")
+                time.sleep(3)
+                exit()
+        except ConnectionError:
+            print()
+            print("\tYour internet is too weak and please fast it")
+            time.sleep(3)
+            exit()
+
 class User(object):
     def __init__(self) -> None:
         os.system("clear")
@@ -73,7 +91,7 @@ class Main(object):
                     os.system("rm -rf abm.txt")
                     Main()
         platform_reverse()
-            
+
 class platform_reverse(object):
     def __init__(self) -> None:
         os.system("clear")
@@ -91,4 +109,4 @@ class platform_reverse(object):
             exit(" Your internet connection failed ")
 
 if __name__ == '__main__':
-    User()
+    User_Main()
