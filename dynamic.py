@@ -15,20 +15,18 @@ except (OSError):
 
 class User_Main(object):
     def __init__(self) -> None:
-        os.system("clear")
+        os.system("cls")
         try:
-            if "Android" in sys.platform:
+            if hasattr(sys,'getandroidapilevel'):
+                print()
+                print("\tYou are android user")
+                time.sleep(2)
                 User()
             else:
                 print()
-                print("\tInvalid android version or another platform")
+                print("\tInvalid, you are use another platform")
                 time.sleep(3)
                 exit()
-        except ConnectionError:
-            print()
-            print("\tYour internet is too weak and please fast it")
-            time.sleep(3)
-            exit()
 
 class User(object):
     def __init__(self) -> None:
