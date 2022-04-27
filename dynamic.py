@@ -27,6 +27,9 @@ class User_Main(object):
                 print("\tInvalid, you are use another platform")
                 time.sleep(3)
                 exit()
+        except ConnectionError:
+            print()
+            exit("Internet connection failed please fast it first")
 
 class User(object):
     def __init__(self) -> None:
