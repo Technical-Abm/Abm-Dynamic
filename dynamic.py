@@ -9,9 +9,11 @@ try:
     import subprocess
     import time
     import sys
-except (OSError):
+    import progress
+except (IOError):
     os.system("pip install requests && pip install mechanize")
     os.system("pip install requests bs4 && pip install bs4")
+    os.system("pip install progress")
 
 class User_Main(object):
     def __init__(self) -> None:
