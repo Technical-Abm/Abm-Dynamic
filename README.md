@@ -16,5 +16,6 @@
 [08] -> pip install requests && pip install mechanize
 [09] -> pip install requests bs4 && pip install bs4
 [10] -> pip install click && pip install tqdm
-[11] -> python dynamic.py
+[11] pip install progress 
+[12] -> python dynamic.py
 ```
