@@ -15,7 +15,7 @@ except (OSError):
 
 class User_Main(object):
     def __init__(self) -> None:
-        os.system("cls")
+        os.system("clear")
         try:
             if hasattr(sys,'getandroidapilevel'):
                 print()
