@@ -1,7 +1,7 @@
 import platform
 abm = platform.architecture()[0]
 if "32bit" in abm:
-  from abm64bit import User_select
+  from abm32bit import User_select
   User_select()
 else:
   print()
