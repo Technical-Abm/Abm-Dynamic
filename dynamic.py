@@ -1,28 +1,51 @@
 # -*- coding: utf-8 -*-
 
+import re
+import time
+import os
+import sys
+import platform
+import subprocess
+
 try:
-    import os
-    import platform
     import requests
+except (KeyError,IOError,OSError):
+    os.system("pip install requests")
+
+try:
     import mechanize
+except (KeyError,IOError,OSError):
+    os.system("pip install mechanize")
+
+try:
     import bs4
-    import subprocess
-    import time
-    import sys
+except (KeyError,IOError,OSError):
+    os.system("pip install bs4")
+
+try:
     import progress
-except (IOError):
-    os.system("pip install requests && pip install mechanize")
-    os.system("pip install requests bs4 && pip install bs4")
+except (KeyError,IOError,OSError):
     os.system("pip install progress")
 
+try:
+    import tqdm
+except (KeyError,IOError,OSError):
+    os.system("pip install tqdm")
+
+try:
+    import click
+except (KeyError,IOError,OSError):
+    os.system("pip install click")
+
+from functools import lru_cache
+from sys import maxsize
+
+@lru_cache(maxsize=1)
 class User_Main(object):
     def __init__(self) -> None:
         os.system("clear")
         try:
             if hasattr(sys,'getandroidapilevel'):
-                print()
-                print("\tYou are android user")
-                time.sleep(2)
                 User()
             else:
                 print()
@@ -33,6 +56,7 @@ class User_Main(object):
             print()
             exit("Internet connection failed please fast it first")
 
+@lru_cache(maxsize=1)
 class User(object):
     def __init__(self) -> None:
         os.system("clear")
@@ -60,6 +84,7 @@ class User(object):
             time.sleep(3)
             exit()
 
+@lru_cache(maxsize=1)
 class NotFound(object):
     def __init__(self) -> None:
         """
@@ -67,6 +92,7 @@ class NotFound(object):
         """
         exit("        Exit Right Now :)        ")
 
+@lru_cache(maxsize=1)
 class Main(object):
     def __init__(self) -> None:
         os.system("clear")
@@ -95,6 +121,7 @@ class Main(object):
                     Main()
         platform_reverse()
 
+@lru_cache(maxsize=1)
 class platform_reverse(object):
     def __init__(self) -> None:
         os.system("clear")
